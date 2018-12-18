@@ -1,0 +1,11 @@
+version: '2'
+services:
+  node:
+    build: .
+    ports:
+      - "80:4000"
+    volumes:
+      - ".:/usr/src/app/:rw"
+      - "/usr/src/app/node_modules"
+    environment:
+      - NODE_ENV=dev
